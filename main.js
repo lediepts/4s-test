@@ -45,3 +45,4 @@ function login() {
   }
 
 }
+main.style["pointer-events"] = "none";
