@@ -25,7 +25,7 @@ x();
 - C: `3, 3, 3` and `1, 2, 3`
 - D: `1, 2, 3` and `3, 3, 3`
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: B
@@ -59,7 +59,7 @@ console.log(!(a.length - window.a.length));
 - C: `true`
 - D: `false`
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: C
@@ -94,7 +94,7 @@ console.log(Boolean(x()));
 - C: -1
 - D: `false`
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: A
@@ -133,7 +133,7 @@ Be aware that the function x() (in the form of `function express` or `anonymous 
 - C: 81
 - D: 12
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: C
@@ -178,7 +178,7 @@ var tip = 100;
 - C: "I have \$50";
 - D: "I have \$NaN";
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: D
@@ -215,7 +215,7 @@ console.log(Object.keys(newbie).length);
 - C: 4;
 - D: 5;
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: A
@@ -267,7 +267,7 @@ console.log(Combine.count());
 - C: 7;
 - D: 8;
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: A
@@ -305,7 +305,7 @@ console.log(x);
 - C: 2;
 - D: 10;
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: A
@@ -348,7 +348,7 @@ console.log(f(10));
 - C: 21 and 26;
 - D: 26 and 21;
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: C
@@ -382,7 +382,7 @@ console.log(x === z);
 - C: true true false false;
 - D: false false true true;
 
-<details><summary><b>Answer</b></summary>
+<details class="answer" ><summary><b>Answer</b></summary>
 <p>
 
 ### Answer: D

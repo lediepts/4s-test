@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4S-TEST</title>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+</head>
+
+<body style="background-color: black;width: 90vw;max-width: 1200px; margin: 0 auto;">
+  <button class="login" onclick="showDialog()">ログイン</button>
+  <main id="main" style="padding: 2rem;background-color: rgb(20, 20, 20);">
+    <zero-md src="../README.md"><template>
+        <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css@4/github-markdown.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css">
+        <style>
+          *:not(.language-javascript, .parameter) {
+            color: rgb(255, 255, 255)
+          }
+
+          .token.operator {
+            background: transparent;
+          }
+        </style>
+      </template></zero-md>
+    <style>
+      .main {
+        pointer-events: none;
+      }
+
+      .dialog {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        bottom: 0%;
+        background: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container>div {
+        margin: 0.4rem auto;
+      }
+
+      .container>div:last-child {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin-top: 1rem;
+      }
+
+      .container>div>button {
+        min-width: 60px;
+      }
+
+      .login {
+        padding: 4px 1rem;
+      }
+    </style>
+
+  </main>
+  <div class="dialog">
+    <div class="container">
+      <p>パスワードを入力してください</p>
+      <div>
+        <label for="pass">パスワード
+        </label>
+        <input autofocus type="password" id="pass">
+      </div>
+      <div>
+        <button onclick="closeDialog()">閉じる</button>
+        <button onclick="login()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js">
+
+  </script>
+</body>
+
+</html>
