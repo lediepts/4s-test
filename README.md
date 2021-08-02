@@ -238,43 +238,30 @@ Now is time to think about coping an object in JS either shallow or deep one.
 ## 7. What's the output?
 
 ```javascript
-var candidate = {
-  name: "4s-dev",
-  age: 30,
-};
+console.log("hello");
 
-var job = {
-  frontend: "Vuejs or Reactjs",
-  backend: "PHP and Laravel",
-  city: "Auckland",
-};
+setTimeout(() => console.log("world"), 0);
 
-class Combine {
-  static get() {
-    return Object.assign(candidate, job);
-  }
-
-  static count() {
-    return Object.keys(this.get()).length;
-  }
-}
-
-console.log(Combine.count());
+console.log("hi");
 ```
 
-- A: 5;
-- B: 6;
-- C: 7;
-- D: 8;
+- A: "hello" -> "world" -> "hi"
+- B: "hello" -> "hi" -> "world"
+- C: "hi" -> "world" -> "hello"
+- D: "hi" -> "hello" -> "world"
 
-<details class="answer" ><summary><b>Answer</b></summary>
+<details><summary><b>Answer</b></summary>
 <p>
 
-### Answer: A
+### Answer: B
 
-The buit-in method `Object.assign(candidate, job)` merges the two objects `candidate` and `job` into one object. Then the method `Object.keys` counts the number of `key` in the object.
+Given that the function setTimeout() will be kept in the `task queue` before jumping back to `stack,` "hello" and "hi" will be printed first, then A is incorrect. That is also the case of the answers C and D.
 
-Note that two methods `get()` and `count()` are defined as `static`, so they need to be called statically using `Class.staticmethod()` syntax. Then the final object get 5 elements.
+No matter how many seconds you set to the `setTimeout()` function, it will run after synchronous code. So we will get "hello" first as it is put into the call stack first. Though the `setTimeout()` is then being put into the call stack, it will subsequently offload to web API (or Node API) and then being called when other synchronous codes are cleared. It means we then get "hi" and finally "world".
+
+So B is the correct answer.
+
+Credit: @kaitoubg (voz) for your suggestion regarding the ` timeout throttled` by which I have decided to alter the question slightly. It will ensure that readers will not get confused as the previous code might bring out different results when tested on other browsers or environments. The main point of the question is about the discrepancy between the synchronous code and asynchronous code when using `setTimeout.`.
 
 </p>
 </details>
