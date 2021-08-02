@@ -239,7 +239,7 @@ Now is time to think about coping an object in JS either shallow or deep one.
 
 ```javascript
 var candidate = {
-  name: "Vuong",
+  name: "4s-dev",
   age: 30,
 };
 
